@@ -8,25 +8,25 @@ struct RGB
 #pragma region operator
   inline RGB operator+(const RGB& other)
   {
-    RGB ret = { this->r + other.r, this->g + other.g, this->b + other.b };
+    RGB ret = { (uint8_t)(this->r + other.r), uint8_t(this->g + other.g), uint8_t(this->b + other.b) };
     return ret;
   }
 
   inline RGB operator-(const RGB& other)
   {
-    RGB ret = { this->r - other.r, this->g - other.g, this->b - other.b };
+    RGB ret = { (uint8_t)(this->r - other.r), (uint8_t)(this->g - other.g), (uint8_t)(this->b - other.b) };
     return ret;
   }
 
   inline RGB operator*(const RGB& other)
   {
-    RGB ret = { this->r * other.r, this->g * other.g, this->b * other.b };
+    RGB ret = { (uint8_t)(this->r * other.r), (uint8_t)(this->g * other.g), (uint8_t)(this->b * other.b) };
     return ret;
   }
 
   inline RGB operator/(const RGB& other)
   {
-    RGB ret = { this->r / other.r, this->g / other.g, this->b / other.b };
+    RGB ret = { (uint8_t)(this->r / other.r), (uint8_t)(this->g / other.g), (uint8_t)(this->b / other.b) };
     return ret;
   }
 

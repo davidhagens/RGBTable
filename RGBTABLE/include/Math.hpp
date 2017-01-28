@@ -90,6 +90,16 @@ struct Vector2
     this->X /= other;
     this->Y /= other;
   }
+
+  inline bool operator==(const Vector2& other)
+  {
+    return this->X == other.X && this->Y == other.Y;
+  }
+
+  inline bool operator!=(const Vector2& other)
+  {
+    return this->X != other.X || this->Y != other.Y;
+  }
 #pragma endregion
 };
 
@@ -183,6 +193,16 @@ struct Vector2F
   {
     this->X /= other;
     this->Y /= other;
+  }
+
+  inline bool operator==(const Vector2F& other)
+  {
+    return this->X == other.X && this->Y == other.Y;
+  }
+
+  inline bool operator!=(const Vector2F& other)
+  {
+    return this->X != other.X || this->Y != other.Y;
   }
 #pragma endregion
 };

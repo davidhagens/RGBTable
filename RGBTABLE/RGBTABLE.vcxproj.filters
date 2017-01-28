@@ -63,6 +63,9 @@
     <ClInclude Include="include\RenderImage.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="include\Snake.h">
+      <Filter>Headerdateien\Games</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bitmap.cpp">
@@ -92,7 +95,10 @@
     <ClCompile Include="src\Tetromino.cpp">
       <Filter>Quelldateien\Games\Tetris</Filter>
     </ClCompile>
-    <ClCompile Include="include\RenderImage.cpp">
+    <ClCompile Include="src\Snake.cpp">
+      <Filter>Quelldateien\Games</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RenderImage.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

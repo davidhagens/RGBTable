@@ -1,40 +1,19 @@
 //#include "vld.h"
 #include "LEDMatrix.h"
-#include "Bitmap.h"
-#include "Tetris.h"
+#include "Snake.h"
 #include <iostream>
 
 void main()
 {
-  for (;;)
-  {
-    for (uint16_t i = 0; i < 30; i++)
-    {
-      _LEDMatrix->Clear();
-      _LEDMatrix->DrawCircle({ 18,9 }, i, COLOR_GREEN);
-      _LEDMatrix->Show();
-      Sleep(100);
-    }
-    for (uint16_t i = 0; i < 30; i++)
-    {
-      _LEDMatrix->Clear();
-      _LEDMatrix->FillCircle({ 18,9 }, i, COLOR_RED);
-      _LEDMatrix->Show();
-      Sleep(100);
-    }
-  }
-
+  IGame* snake = new Games::Snake();
+  snake->SetTargetFrameRate(60);
+  snake->StartLoop();
+  
+  //block for user input
+  char a;
+  std::cin >> a;
+  snake->Quit();
+  delete snake;
   LEDMatrix::Destroy();
-
-  //IGame* tetris = new Games::TetrisGame();
-  //tetris->SetTargetFrameRate(30);
-  //tetris->StartLoop();
-  //
-  ////block for user input
-  //char a;
-  //std::cin >> a;
-  //tetris->Quit();
-  //delete tetris;
-  //LEDMatrix::Destroy();
-  //Controller::Destroy();
+  Controller::Destroy();
 }

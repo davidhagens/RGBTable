@@ -124,11 +124,13 @@
     <ClInclude Include="include\RGB.h" />
     <ClInclude Include="include\Serial.h" />
     <ClInclude Include="include\Shape.h" />
+    <ClInclude Include="include\Snake.h" />
     <ClInclude Include="include\Tetris.h" />
     <ClInclude Include="include\Tetromino.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="include\RenderImage.cpp" />
+    <ClCompile Include="src\RenderImage.cpp" />
+    <ClCompile Include="src\Snake.cpp" />
     <ClCompile Include="src\Bitmap.cpp" />
     <ClCompile Include="src\Controller.cpp" />
     <ClCompile Include="src\IGame.cpp" />

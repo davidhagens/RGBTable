@@ -31,14 +31,17 @@ namespace Games
     void CheckRows();
     //remove full rows
     void RemoveRow(int row);
-  public:
-    TetrisGame();
-    ~TetrisGame();
 
     //overloaded functions from IGame
     void Load() override final;
     void Update() override final;
     void Draw() override final;
     void Reset() override final;
+
+  public:
+    TetrisGame();
+    ~TetrisGame();
+
+    
   };
 }

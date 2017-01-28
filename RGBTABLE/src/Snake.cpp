@@ -5,7 +5,7 @@ void Games::Snake::Move()
   Vector2 next = this->head + Vector2{
     this->nextMove == SnakeDirection::left ? -1 : this->nextMove == SnakeDirection::right ? 1 : 0,
     this->nextMove == SnakeDirection::up ? -1 : this->nextMove == SnakeDirection::down ? 1 : 0 };
-  if (next.X < 0 || next.X >= LED_W || next.Y < 0 || next.Y >= LED_H)
+  if (next.X < 0 || next.X >= LED_W || next.Y < 0 || next.Y >= LED_H || this->board.getPixelColor(next) != COLOR_BLACK)
   {
     this->Reset();
     return;

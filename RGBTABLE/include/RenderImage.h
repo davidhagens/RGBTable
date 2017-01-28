@@ -1,5 +1,35 @@
 #pragma once
-#include "LEDMatrix.h"
+#include "Math.hpp"
+#include <inttypes.h>
+#include "Bitmap.h"
+#include "RGB.h"
+#include "Shape.h"
+
+#define LED_W 36
+#define LED_H 18
+#define LED_COUNT LED_W * LED_H
+#define LED_S0_COUNT LED_W * 10 //first 10 rows, the actual led matrix is powered by two Arduino UNO
+#define LED_S1_COUNT LED_W * 8 //last 8 rows
+#define LED_BYTES LED_COUNT * 3 //3 bytes per pixel (r,g,b) * 648 (LED_COUNT)
+#define LED_S0_BYTES LED_S0_COUNT * 3 //bytes used for the first 10 rows
+#define LED_S1_BYTES LED_S1_COUNT * 3 //bytes used for the last 8 rows
+//override modes to set a bitmap or a color
+#define OVERRIDE_MODE_ALL 0x00
+#define OVERRIDE_MODE_BLACK_AS_ALPHA 0x01
+#define OVERRIDE_MODE_MERGE_ADD 0x02
+#define OVERRIDE_MODE_MERGE_MULTIPLY 0x03
+#define OVERRIDE_MODE_MERGE_MULTIPLY_AND_AVERAGE 0x04
+
+//some RGB values for better readability
+#define COLOR_BLACK   RGB{0,0,0}
+#define COLOR_WHITE   RGB{255,255,255}
+#define COLOR_RED     RGB{255,0,0}
+#define COLOR_GREEN   RGB{0,255,0}
+#define COLOR_BLUE    RGB{0,0,255}
+#define COLOR_YELLOW  RGB{255,255,0}
+#define COLOR_CYAN    RGB{0,255,255}
+#define COLOR_MAGENTA RGB{255,0,255}
+#define COLOR_ORANGE  RGB{255,165,0}
 
 class RenderImage
 {
@@ -38,7 +68,7 @@ public:
   //draws an unfilled circle, overrideMode is optional
   void DrawCircle(const Vector2 point, const uint16_t radius, const RGB color, const uint8_t overrideMode = 0x00);
   //draws a line, overrideMode is optional
-  void DrawLine(const Vector2 start, const Vector2 end, const RGB color, const uint8_t overrideMode = 0x00);
+  void DrawLine(Vector2 start, Vector2 end, const RGB color, const uint8_t overrideMode = 0x00);
   //draws a straight line in X direction
   void DrawStraightX(const uint16_t Y, const uint16_t X1, const uint16_t X2, const RGB color, const uint8_t overrideMode = 0x00);
   //draws a straight line in Y direction

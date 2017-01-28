@@ -8,14 +8,14 @@ void main()
 {
   for (;;)
   {
-    for (size_t i = 0; i < 30; i++)
+    for (uint16_t i = 0; i < 30; i++)
     {
       _LEDMatrix->Clear();
       _LEDMatrix->DrawCircle({ 18,9 }, i, COLOR_GREEN);
       _LEDMatrix->Show();
       Sleep(100);
     }
-    for (size_t i = 0; i < 30; i++)
+    for (uint16_t i = 0; i < 30; i++)
     {
       _LEDMatrix->Clear();
       _LEDMatrix->FillCircle({ 18,9 }, i, COLOR_RED);

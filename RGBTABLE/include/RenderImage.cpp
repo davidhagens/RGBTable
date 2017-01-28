@@ -2,12 +2,26 @@
 
 uint16_t RenderImage::GetPixelIdx(const uint16_t idx)
 {
-  return uint16_t();
+  //so the LED Table has the following layout:
+  /*
+  0  1  2  3  4  5  6  7  8  9  10
+  21 20 19 18 17 16 15 14 13 12 11
+  22 23 24 25 26 27 28 29 30 31 32
+  ...
+
+  */
+  //in the future this function should also take care of mirroring and other stuff
+  uint16_t y = idx / LED_W;
+  uint16_t x = idx % LED_W;
+  if (y % 2 == 1) return (y * LED_W) + LED_W - x - 1;
+  return idx;
 }
 
 uint16_t RenderImage::GetPixelIdx(const Vector2 pos)
 {
-  return uint16_t();
+  //same as the function above
+  if (pos.Y % 2 == 1) return (pos.Y * LED_W) + LED_W - pos.X - 1;
+  return (pos.Y * LED_W) + pos.X;
 }
 
 RenderImage::RenderImage()
@@ -260,7 +274,7 @@ void RenderImage::DrawCircle(const Vector2 point, const uint16_t radius, const R
 #undef plot
 #undef line
 
-void RenderImage::DrawLine(const Vector2 start, const Vector2 end, const RGB color, const uint8_t overrideMode)
+void RenderImage::DrawLine(Vector2 start, Vector2 end, const RGB color, const uint8_t overrideMode)
 {
   //Bresenham's line algorithm from http://rosettacode.org/wiki/Bitmap/Bresenham%27s_line_algorithm#C.2B.2B
   const bool steep = (fabs(end.Y - start.Y) > fabs(end.X - start.X));

@@ -34,7 +34,7 @@ Serial::Serial(uint8_t identifier, unsigned int BAUD)
 
   //We're not yet connected
   this->connected = false;
-  int currentPort = 0;
+  size_t currentPort = 0;
 
   //iterate over all available com ports until we are connected
   while (!this->connected && currentPort < Serial::AvailableComPorts.size())

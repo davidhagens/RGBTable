@@ -2,7 +2,7 @@
 #include "Math.hpp"
 #include <inttypes.h>
 #include "Bitmap.h"
-#include "RGB.h"
+#include "RGB.hpp"
 #include "Shape.h"
 
 #define LED_W 36

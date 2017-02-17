@@ -27,6 +27,7 @@ uint16_t RenderImage::GetPixelIdx(const Vector2 pos)
 RenderImage::RenderImage()
 {
   this->img = new uint8_t[LED_BYTES];
+  memset(this->img, 0, LED_BYTES);
 }
 
 RenderImage::~RenderImage()

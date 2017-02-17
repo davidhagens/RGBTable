@@ -21,6 +21,7 @@ void Games::Snake::Move()
     this->EraseBack();
     this->SetHead(next);
   }
+  this->currentDirection = this->nextMove;
 }
 
 void Games::Snake::SetHead(Vector2 v)
@@ -84,6 +85,7 @@ void Games::Snake::Draw()
 
 void Games::Snake::Reset()
 {
+  this->board.Clear();
   std::queue<Vector2>().swap(this->snake);
   this->currentApple = { rand() % LED_W, rand() % LED_H };
   Vector2 v = { rand() % LED_W, rand() % LED_H };
@@ -92,6 +94,7 @@ void Games::Snake::Reset()
     v = { rand() % LED_W, rand() % LED_H };
   }
   this->SetHead(v);
+  this->nextMove = (SnakeDirection::direction)(rand() % 4);
 }
 
 Games::Snake::Snake()

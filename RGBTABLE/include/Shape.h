@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include "Math.h"
-#include "RGB.h"
+#include "RGB.hpp"
 class Shape
 {
 private:

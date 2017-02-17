@@ -76,6 +76,9 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -84,6 +87,9 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -114,21 +120,34 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\BinaryFileReader.h" />
     <ClInclude Include="include\Bitmap.h" />
     <ClInclude Include="include\Controller.h" />
+    <ClInclude Include="include\FontRenderer.h" />
     <ClInclude Include="include\GameController.hpp" />
+    <ClInclude Include="include\IEffect.h" />
     <ClInclude Include="include\IGame.h" />
     <ClInclude Include="include\LEDMatrix.h" />
     <ClInclude Include="include\Math.hpp" />
+    <ClInclude Include="include\Rainbow.h" />
+    <ClInclude Include="include\Random.h" />
     <ClInclude Include="include\RenderImage.h" />
-    <ClInclude Include="include\RGB.h" />
+    <ClInclude Include="include\RGB.hpp" />
     <ClInclude Include="include\Serial.h" />
     <ClInclude Include="include\Shape.h" />
     <ClInclude Include="include\Snake.h" />
     <ClInclude Include="include\Tetris.h" />
     <ClInclude Include="include\Tetromino.h" />
+    <ClInclude Include="include\TrueType.h" />
+    <ClInclude Include="include\TrueTypeUtility.h" />
+    <ClInclude Include="include\TableManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\BinaryFileReader.cpp" />
+    <ClCompile Include="src\FontRenderer.cpp" />
+    <ClCompile Include="src\Random.cpp" />
+    <ClCompile Include="src\Rainbow.cpp" />
+    <ClCompile Include="src\IEffect.cpp" />
     <ClCompile Include="src\RenderImage.cpp" />
     <ClCompile Include="src\Snake.cpp" />
     <ClCompile Include="src\Bitmap.cpp" />
@@ -140,6 +159,9 @@
     <ClCompile Include="src\Shape.cpp" />
     <ClCompile Include="src\Tetris.cpp" />
     <ClCompile Include="src\Tetromino.cpp" />
+    <ClCompile Include="src\TrueType.cpp" />
+    <ClCompile Include="src\TrueTypeUtility.cpp" />
+    <ClCompile Include="src\TableManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

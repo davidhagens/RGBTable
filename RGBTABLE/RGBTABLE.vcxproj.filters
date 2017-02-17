@@ -25,6 +25,18 @@
     <Filter Include="Quelldateien\Games\Tetris">
       <UniqueIdentifier>{d754658a-a46b-466a-84e9-73dacc7d0f2a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Quelldateien\Effects">
+      <UniqueIdentifier>{3aef1426-aaef-468a-8e23-a5716f4ce238}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\Effects">
+      <UniqueIdentifier>{73daac67-fb37-446f-b47f-8eea680b8bb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\TrueType">
+      <UniqueIdentifier>{c94d537f-9e3e-4a5c-a2c9-ae8970278ef1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\TrueType">
+      <UniqueIdentifier>{fc318a94-a392-40be-8736-1547646e9964}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Bitmap.h">
@@ -45,9 +57,6 @@
     <ClInclude Include="include\Math.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="include\RGB.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="include\Serial.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -65,6 +74,33 @@
     </ClInclude>
     <ClInclude Include="include\Snake.h">
       <Filter>Headerdateien\Games</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IEffect.h">
+      <Filter>Headerdateien\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Rainbow.h">
+      <Filter>Headerdateien\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Random.h">
+      <Filter>Headerdateien\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TrueType.h">
+      <Filter>Headerdateien\TrueType</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TrueTypeUtility.h">
+      <Filter>Headerdateien\TrueType</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FontRenderer.h">
+      <Filter>Headerdateien\TrueType</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BinaryFileReader.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TableManager.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RGB.hpp">
+      <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +135,30 @@
       <Filter>Quelldateien\Games</Filter>
     </ClCompile>
     <ClCompile Include="src\RenderImage.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IEffect.cpp">
+      <Filter>Quelldateien\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rainbow.cpp">
+      <Filter>Quelldateien\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Random.cpp">
+      <Filter>Quelldateien\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TrueType.cpp">
+      <Filter>Quelldateien\TrueType</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TrueTypeUtility.cpp">
+      <Filter>Quelldateien\TrueType</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FontRenderer.cpp">
+      <Filter>Quelldateien\TrueType</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BinaryFileReader.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TableManager.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

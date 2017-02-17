@@ -1,5 +1,5 @@
 So this is my code which is powering my LED Matrix Table.
-The table is coffee table futering a LED matrix on top of it with 36 * 18 WS2812b LEDs (NeoPixel).
+The table is a coffee table featuring a LED matrix on top of it with 36 * 18 WS2812b LEDs (NeoPixel).
 
 Used Hardware:
 - 3 * Ardunio Uno (2 of them are powering the LEDs and the other one does other stuff which is explained later)
